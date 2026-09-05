@@ -1,23 +1,76 @@
-/* Mobile-only image alignment pass — desktop remains unchanged. */
+/* Mobile polish — intentionally overrides desktop rules without changing desktop layout */
 @media (max-width:800px){
   html,body{width:100%;max-width:100%;overflow-x:hidden}
-  .nav{height:70px;padding:0 5vw}.logo{gap:9px}.logo b{width:34px;height:34px}.logo span{font-size:13px}.menu{font-size:24px;padding:8px;line-height:1}
-  .hero{height:100svh;min-height:620px;max-height:820px}.hero-bg img{object-position:34% center!important}.hero-copy{left:6vw;right:6vw;top:46%;transform:translateY(-40%);max-width:none}.hero h1{font-size:clamp(46px,13vw,58px);line-height:.91;margin:16px 0 22px}.hero-copy>p:not(.eyebrow){font-size:13px;line-height:1.65;max-width:390px}.hero .actions{margin-top:26px;gap:12px}.hero .btn{padding:14px 16px}.hero-foot{bottom:20px;font-size:8px;gap:10px}.hero-foot .line{width:45px}.wrap{padding-left:6vw;padding-right:6vw}
-  .intro,.process,.quote{padding-top:78px;padding-bottom:78px}.intro h2,.process h2{font-size:clamp(40px,11vw,52px)}.intro .two,.process>.two{margin-top:28px;gap:28px}.intro p,.process p,.about p{font-size:13px;line-height:1.8}.lead{font-size:17px!important;line-height:1.6!important}
-  .stories{padding-bottom:78px}.section-head{margin-bottom:30px}.section-head h2{font-size:clamp(40px,11vw,52px);margin-top:12px}.section-head>p{font-size:11px;line-height:1.65;margin-top:18px}
-  .stories .large{height:440px!important}.stories .pair{gap:10px!important}.stories .pair .card{height:430px!important}.stories .film,.stories .maternity{height:430px!important;margin-top:10px!important}
-  .stories .wedding{background-position:center 32%!important}.stories .pre{background-position:center 38%!important}.stories .portrait{background-position:center 30%!important}.stories .maternity{background-position:center 34%!important}.stories .film{background-position:center 30%!important}
-  .meta{top:18px;left:18px;right:18px;grid-template-columns:36px 1fr auto;gap:8px;font-size:7px;letter-spacing:.11em}.meta span:nth-child(2){font-size:9px;letter-spacing:.12em}.title{left:20px;bottom:20px;right:18px}.title small{font-size:9px}.title strong{font-size:28px;line-height:1.02}.film .title strong{font-size:30px}.portfolio-note{margin-top:20px;padding-top:16px;font-size:10px}
-  .gallery{padding-bottom:78px}.gallery-grid{grid-auto-rows:165px!important;gap:8px!important}.shot span{left:12px;bottom:12px;font-size:8px}
-  /* Each gallery image gets its own mobile focal point. */
-  .gallery-grid .shot img{object-fit:cover!important;object-position:center center!important}.shot-a img{object-position:center 48%!important}.shot-b img{object-position:center 30%!important}.shot-c img{object-position:center 27%!important}.shot-d img{object-position:center 30%!important}.shot-e img{object-position:center 27%!important}.shot-f img{object-position:center 37%!important}.shot-g img{object-position:center 27%!important}.shot-h img{object-position:center 50%!important}.shot-i img{object-position:center 30%!important}.shot-j img{object-position:center 32%!important}.shot-k img{object-position:center 50%!important}.shot-l img{object-position:center 38%!important}
-  .marquee{padding:18px 0}.marquee div{font-size:21px}.marquee b{margin:0 18px}.process .btn{margin-top:8px}.steps article{grid-template-columns:40px 1fr;gap:12px;padding:20px 0}.steps h3{font-size:20px}.steps p{font-size:11px!important}
-  .about{padding-top:60px;padding-bottom:78px;gap:30px}.about-photo{aspect-ratio:4/3!important;border-radius:0}.about-copy h2{font-size:clamp(39px,10.5vw,50px)!important;margin:14px 0 22px}.facts{margin-top:28px;padding-top:20px;gap:8px!important}.facts strong{font-size:21px!important}.facts span{font-size:7px!important}
-  .quote{padding-left:8vw;padding-right:8vw}.quote>div{font-size:80px;height:52px}.quote blockquote{font-size:31px;line-height:1.12}.contact{height:620px}.contact-copy{padding:0 7vw}.contact h2{font-size:clamp(47px,13vw,60px);line-height:.94;margin:16px 0}.contact-copy>p{font-size:12px;line-height:1.6}.contact .actions{gap:10px;margin-top:25px}.contact .btn{width:min(100%,300px);justify-content:center}.contact-email{font-size:11px;margin-top:20px}
-  footer{padding:34px 6vw 22px;gap:22px}footer>div{display:grid;grid-template-columns:1fr 1fr;gap:16px;font-size:9px}footer>a:nth-last-child(2){text-align:left;font-size:9px}
-  .category-modal{padding:62px 5vw 24px!important}.category-head{padding:0 48px 28px 0!important}.category-head h2{font-size:clamp(42px,12vw,52px)!important;margin:14px 0}.category-head p{font-size:11px;line-height:1.6}.category-close{width:42px;height:42px;font-size:27px;top:-4px}.category-grid{grid-auto-rows:150px!important;gap:8px!important}.category-shot.featured{grid-row:span 3!important}.category-shot:not(.featured){grid-row:span 2!important}.category-shot span{left:11px!important;bottom:10px!important;font-size:7px!important}
-  /* Category images are aligned per item instead of one generic crop. */
-  .category-grid .category-shot img{object-fit:cover!important}.category-grid .category-shot:nth-child(1) img{object-position:center 35%!important}.category-grid .category-shot:nth-child(2) img{object-position:center 30%!important}.category-grid .category-shot:nth-child(3) img{object-position:center 50%!important}.category-grid .category-shot:nth-child(4) img{object-position:center 32%!important}.category-grid .category-shot:nth-child(5) img{object-position:center 32%!important}.category-grid .category-shot:nth-child(6) img{object-position:center 35%!important}.category-grid .category-shot:nth-child(7) img{object-position:center 32%!important}.category-grid .category-shot:nth-child(8) img{object-position:center 32%!important}
+  .nav{height:70px;padding:0 5vw}
+  .logo{gap:9px}.logo b{width:34px;height:34px}.logo span{font-size:13px}
+  .menu{font-size:24px;padding:8px;line-height:1}
+  .hero{height:100svh;min-height:620px;max-height:820px}
+  .hero-bg img{object-position:34% center!important}
+  .hero-copy{left:6vw;right:6vw;top:46%;transform:translateY(-40%);max-width:none}
+  .hero h1{font-size:clamp(46px,13vw,58px);line-height:.91;margin:16px 0 22px;letter-spacing:-.045em}
+  .hero-copy>p:not(.eyebrow){font-size:13px;line-height:1.65;max-width:390px}
+  .hero .actions{margin-top:26px;gap:12px}
+  .hero .btn{padding:14px 16px}
+  .hero-foot{bottom:20px;font-size:8px;gap:10px}.hero-foot .line{width:45px}
+  .wrap{padding-left:6vw;padding-right:6vw}
+  .intro,.process,.quote{padding-top:78px;padding-bottom:78px}
+  .intro h2,.process h2{font-size:clamp(40px,11vw,52px)}
+  .intro .two,.process>.two{margin-top:28px;gap:28px}
+  .intro p,.process p,.about p{font-size:13px;line-height:1.8}
+  .lead{font-size:17px!important;line-height:1.6!important}
+  .stories{padding-bottom:78px}
+  .section-head{margin-bottom:30px}.section-head h2{font-size:clamp(40px,11vw,52px);margin-top:12px}
+  .section-head>p{font-size:11px;line-height:1.65;margin-top:18px}
+  .stories .large{height:440px!important}.stories .pair{gap:10px!important}
+  .stories .pair .card{height:430px!important}.stories .film{height:430px!important;margin-top:10px}
+  .stories .maternity{height:430px!important;margin-top:10px!important;background-position:center 28%!important}
+  .stories .wedding{background-position:center 30%!important}.stories .pre{background-position:center 35%!important}
+  .stories .portrait{background-position:center 28%!important}.stories .film{background-position:center 28%!important}
+  .meta{top:18px;left:18px;right:18px;grid-template-columns:36px 1fr auto;gap:8px;font-size:7px;letter-spacing:.11em}
+  .meta span:nth-child(2){font-size:9px;letter-spacing:.12em}
+  .title{left:20px;bottom:20px;right:18px}.title small{font-size:9px}.title strong{font-size:28px;line-height:1.02}
+  .film .title strong{font-size:30px}.portfolio-note{margin-top:20px;padding-top:16px;font-size:10px}
+  .gallery{padding-bottom:78px}.gallery-grid{grid-auto-rows:165px!important;gap:8px!important}
+  .shot span{left:12px;bottom:12px;font-size:8px}
+  /* Mobile gallery: each frame has its own focal point so faces/subjects stay visible. */
+  .gallery-grid .shot img{object-fit:cover!important}
+  .gallery-grid .shot-a img{object-position:center 45%!important}
+  .gallery-grid .shot-b img{object-position:center 28%!important}
+  .gallery-grid .shot-c img{object-position:center 18%!important}
+  .gallery-grid .shot-d img{object-position:center 25%!important}
+  .gallery-grid .shot-e img{object-position:center 22%!important}
+  .gallery-grid .shot-f img{object-position:center 35%!important}
+  .gallery-grid .shot-g img{object-position:center 25%!important}
+  .gallery-grid .shot-h img{object-position:center!important}
+  .gallery-grid .shot-i img{object-position:center 28%!important}
+  .gallery-grid .shot-j img{object-position:center 28%!important}
+  .gallery-grid .shot-k img{object-position:center!important}
+  .gallery-grid .shot-l img{object-position:center 35%!important}
+  .marquee{padding:18px 0}.marquee div{font-size:21px}.marquee b{margin:0 18px}
+  .process .btn{margin-top:8px}.steps article{grid-template-columns:40px 1fr;gap:12px;padding:20px 0}
+  .steps h3{font-size:20px}.steps p{font-size:11px!important}
+  .about{padding-top:60px;padding-bottom:78px;gap:30px}.about-photo{aspect-ratio:4/3!important;border-radius:0}
+  .about-copy h2{font-size:clamp(39px,10.5vw,50px)!important;margin:14px 0 22px}.facts{margin-top:28px;padding-top:20px;gap:8px!important}
+  .facts strong{font-size:21px!important}.facts span{font-size:7px!important}
+  .quote{padding-left:8vw;padding-right:8vw}.quote>div{font-size:80px;height:52px}.quote blockquote{font-size:31px;line-height:1.12}
+  .contact{height:620px}.contact-copy{padding:0 7vw}.contact h2{font-size:clamp(47px,13vw,60px);line-height:.94;margin:16px 0}
+  .contact-copy>p{font-size:12px;line-height:1.6}.contact .actions{gap:10px;margin-top:25px}.contact .btn{width:min(100%,300px);justify-content:center}
+  .contact-email{font-size:11px;margin-top:20px}footer{padding:34px 6vw 22px;gap:22px}
+  footer>div{display:grid;grid-template-columns:1fr 1fr;gap:16px;font-size:9px}footer>a:nth-last-child(2){text-align:left;font-size:9px}
+  /* Category popup: preserve the image-specific focal points supplied by script.js. */
+  .category-modal{padding:62px 5vw 24px!important;overflow-x:hidden}
+  .category-head{padding:0 52px 28px 0!important}.category-head h2{font-size:clamp(42px,12vw,52px)!important;margin:14px 0}
+  .category-head p{font-size:11px;line-height:1.6}.category-close{right:0!important;top:-6px!important;width:44px!important;height:44px!important}
+  .category-grid{grid-auto-rows:150px!important;gap:8px!important}
+  .category-shot.featured{grid-row:span 3!important}.category-shot:not(.featured){grid-row:span 2!important}
+  .category-shot{min-width:0!important;width:100%!important;height:100%!important;overflow:hidden}
+  .category-shot img{width:100%!important;height:100%!important;display:block!important;object-fit:cover!important}
+  .category-shot span{left:11px!important;bottom:10px!important;font-size:7px!important}
+  /* Do not override object-position here: script.js provides a custom focal point for every photo. */
   .lightbox{padding:14px}.lightbox img{max-width:96vw;max-height:82vh}.close{top:12px;right:16px;font-size:36px}
 }
-@media (max-width:380px){.hero h1{font-size:44px}.hero-copy>p:not(.eyebrow){font-size:12px}.stories .large,.stories .pair .card,.stories .film,.stories .maternity{height:400px!important}.category-grid{grid-auto-rows:135px!important}.category-head h2{font-size:40px!important}}
+@media (max-width:380px){
+  .hero h1{font-size:48px!important}.hero-copy>p:not(.eyebrow){font-size:13px!important}
+  .stories .large,.stories .pair .card,.stories .film,.stories .maternity{height:450px!important}
+  .gallery-grid{grid-auto-rows:160px!important}.category-grid{grid-auto-rows:160px!important}.category-head h2{font-size:44px!important}
+}
