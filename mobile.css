@@ -73,12 +73,16 @@
   .category-head p{font-size:11px;line-height:1.6}.category-close{right:0!important;top:-6px!important;width:44px!important;height:44px!important}
   .category-grid{grid-auto-rows:150px!important;gap:8px!important}.category-shot.featured{grid-row:span 3!important}.category-shot:not(.featured){grid-row:span 2!important}
   .category-shot{min-width:0!important;width:100%!important;height:100%!important;overflow:hidden}.category-shot img{width:100%!important;height:100%!important;display:block!important;object-fit:cover!important}
-  /* Wedding category: the last two vertical images need their subjects framed higher and farther left/right on mobile. */
+  /* Wedding category: keep the last two images framed around their important subjects. */
   .category-modal[data-category="wedding"] .category-shot:nth-child(4) img{object-position:25% 28%!important}
   .category-modal[data-category="wedding"] .category-shot:nth-child(5) img{object-position:52% 38%!important}
-  /* Pre-Wedding second image: keep both people in frame instead of pushing the groom off the right edge. */
-  .category-modal[data-category="pre"] .category-shot:nth-child(2) img{object-position:72% center!important}
-  .category-modal[data-category="pre"] .category-shot:nth-child(3) img{object-position:55% center!important}
+  /* Pre-Wedding category: use a clean 2x2 layout and show the complete photographs in the first view. */
+  .category-modal[data-category="pre"] .category-shot{grid-row:span 3!important;background:#111!important}
+  .category-modal[data-category="pre"] .category-shot img{object-fit:contain!important;object-position:center center!important;background:#111!important}
+  .category-modal[data-category="pre"] .category-shot:nth-child(1) img{object-position:center center!important}
+  .category-modal[data-category="pre"] .category-shot:nth-child(2) img{object-position:center center!important}
+  .category-modal[data-category="pre"] .category-shot:nth-child(3) img{object-position:center center!important}
+  .category-modal[data-category="pre"] .category-shot:nth-child(4) img{object-position:center center!important}
   .category-shot span{left:11px!important;bottom:10px!important;font-size:7px!important}
   .lightbox{padding:14px}.lightbox img{max-width:96vw;max-height:82vh}.close{top:12px;right:16px;font-size:36px}
 }
